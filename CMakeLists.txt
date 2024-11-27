@@ -10,9 +10,9 @@ add_executable(${PROJECT_NAME}
 
 FetchContent_Declare(XercesC
 	GIT_REPOSITORY https://github.com/apache/xerces-c.git
-	GIT_TAG v3.2.4
+	GIT_TAG v3.3.0
 )
 
 FetchContent_MakeAvailable(XercesC)
 
-target_link_libraries(${PROJECT_NAME} PUBLIC XercesC::XercesC)
+target_link_libraries(${PROJECT_NAME} PUBLIC xerces-c)
