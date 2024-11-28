@@ -16,3 +16,8 @@ FetchContent_Declare(XercesC
 FetchContent_MakeAvailable(XercesC)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC xerces-c)
+
+set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR} )
+set_target_properties(xerces-c PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR} )
+
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
